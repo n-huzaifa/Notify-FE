@@ -1,18 +1,16 @@
 import React from "react";
 import Auth from "./pages/Auth";
-import Home from "./pages/Home.jsx";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='auth' element={<Login />}>
-          <Route path='login' element={<Login />} />
-          <Route path='signup' element={<Login />} />
-        </Route>
+        <Route path='/' element={<Auth />} />
+        <Route path='login' element={<Login />} />
+        <Route path='signup' element={<Signup />} />
       </Routes>
     </BrowserRouter>
   );

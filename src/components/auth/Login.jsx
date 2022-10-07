@@ -17,7 +17,7 @@ function login() {
           <input
             id='login-email'
             type='email'
-            placeholder='Enter your E-mail'
+            placeholder='foo@bar.com'
             className='input w-full max-w-xs'
           />
           <label htmlFor='login-password' className='label'>
@@ -26,15 +26,22 @@ function login() {
           <input
             id='login-password'
             type='password'
-            placeholder='Enter your Password'
+            placeholder='foobar123'
             className='input w-full max-w-xs'
           />
-          <div className='flex justify-center'>
+          <div className='flex flex-col justify-center items-center space-y-2'>
             <input
               type='submit'
               value='Submit'
-              className='btn bg-primary border-none text-white font-medium mt-8 '
+              className='btn bg-primary border-none text-white font-medium mt-8 w-2/6 '
             />
+            <span className='text-sm font-light text-center'>
+              Don't have an account ?
+              <a href='https://google.com' className='text-primary'>
+                {" "}
+                Signup
+              </a>
+            </span>
           </div>
         </div>
       </form>
