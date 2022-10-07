@@ -3,9 +3,14 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
-        primary: "#1f1f1f",
-        secondary: "#3370f2",
+        primary: "#3474fb",
+        secondary: "#1c1c1c",
+        dark: "#1f1f1f",
+        modal: "#caced6",
       },
     },
   },

@@ -1,11 +1,12 @@
-export default function App() {
+import React from "react";
+import Router from "./Router";
+
+function App() {
   return (
-    <div className='bg-primary w-full h-screen text-white'>
-      <div className='flex flex-col text-center'>
-        <h1>Welcome to Notify!!</h1>
-        <button>Login</button>
-        <button>Signup</button>
-      </div>
+    <div className='bg-secondary h-screen'>
+      <Router />
     </div>
   );
 }
+
+export default App;
