@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { FiUserCheck, FiUserPlus } from "react-icons/fi";
 
 function home() {
   return (
@@ -12,11 +13,17 @@ function home() {
               Welcome to <span className='font-medium'>Notify</span>
             </span>
             <div className='flex flex-col w-full space-y-3'>
-              <Link to='login' className='btn btn-primary'>
-                Login
+              <Link
+                to='login'
+                className='btn text-white bg-primary border-0 justify-center space-x-3 flex'>
+                <FiUserCheck className='text-xl' />
+                <span>Login</span>
               </Link>
-              <Link to='signup' className='btn btn-primary'>
-                Signup
+              <Link
+                to='signup'
+                className='btn text-white bg-primary border-0 justify-center space-x-3 flex'>
+                <FiUserPlus className='text-xl' />
+                <span> Signup</span>
               </Link>
             </div>
           </div>

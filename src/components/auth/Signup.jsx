@@ -6,6 +6,8 @@ import axios from "axios";
 const serverURI = "http://localhost:8000/api/auth/signup";
 
 function Signup() {
+  const [error, setError] = useState();
+  const [success, setSuccess] = useState("");
   const [signupForm, setSignupForm] = useState({
     first_name: "",
     last_name: "",
@@ -19,11 +21,27 @@ function Signup() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(signupForm);
+    if (
+      signupForm.first_name === "" ||
+      signupForm.password === "" ||
+      signupForm.email === "" ||
+      signupForm.password === ""
+    ) {
+      setError({ message: "Fill all the fields" });
+      return;
+    }
+
     axios
       .post(serverURI, signupForm)
-      .then((res) => console.log(res.data))
-      .catch((error) => console.log(error));
+      .then((res) => {
+        console.log(res.data);
+        setSuccess("User Created Successfully");
+        setError("");
+      })
+      .catch((error) => {
+        setError({ message: error.response.data });
+        console.log(error);
+      });
   };
 
   return (
@@ -86,6 +104,48 @@ function Signup() {
             onChange={changeHandler}
           />
           <div className='flex flex-col justify-center items-center space-y-2'>
+            {error ? (
+              <div className='alert alert-error shadow-lg mt-4'>
+                <div>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='stroke-current flex-shrink-0 h-6 w-6'
+                    fill='none'
+                    viewBox='0 0 24 24'>
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
+                    />
+                  </svg>
+                  <span>{error.message}</span>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+            {success ? (
+              <div className='alert alert-success shadow-lg mt-4'>
+                <div>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='stroke-current flex-shrink-0 h-6 w-6'
+                    fill='none'
+                    viewBox='0 0 24 24'>
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
+                    />
+                  </svg>
+                  <span>{success}</span>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
             <input
               type='submit'
               value='Submit'
