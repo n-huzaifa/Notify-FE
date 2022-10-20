@@ -149,7 +149,7 @@ function Signup() {
             <input
               type='submit'
               value='Submit'
-              className='btn bg-primary border-none text-white font-medium mt-8 w-2/6 '
+              className='btn bg-primary bg-opacity-20 hover:bg-primary border-none text-white font-medium mt-8 w-2/6 '
             />
             <span className='text-sm font-light text-center'>
               Already have an account ?

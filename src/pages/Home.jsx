@@ -15,13 +15,13 @@ function home() {
             <div className='flex flex-col w-full space-y-3'>
               <Link
                 to='login'
-                className='btn text-white bg-primary border-0 justify-center space-x-3 flex'>
+                className='btn text-white bg-primary bg-opacity-20 hover:bg-primary border-0 justify-center space-x-3 flex'>
                 <FiUserCheck className='text-xl' />
                 <span>Login</span>
               </Link>
               <Link
                 to='signup'
-                className='btn text-white bg-primary border-0 justify-center space-x-3 flex'>
+                className='btn text-white bg-primary bg-opacity-20 hover:bg-primary border-0 justify-center space-x-3 flex'>
                 <FiUserPlus className='text-xl' />
                 <span> Signup</span>
               </Link>
