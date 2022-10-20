@@ -87,7 +87,7 @@ function Login() {
             />
             <span className='text-sm font-light text-center'>
               Don't have an account ?
-              <Link to='/signup' className='text-primary'>
+              <Link to='/auth/signup' className='text-primary'>
                 {" "}
                 Signup
               </Link>

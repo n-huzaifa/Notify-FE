@@ -153,7 +153,7 @@ function Signup() {
             />
             <span className='text-sm font-light text-center'>
               Already have an account ?
-              <Link to='/login' className='text-primary'>
+              <Link to='/auth/login' className='text-primary'>
                 {" "}
                 Login
               </Link>
