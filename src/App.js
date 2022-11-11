@@ -1,3 +1,12 @@
-export default function App() {
-  return <h1 className='text-6xl text-gr font-bold underline'>Hello world!</h1>;
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+function App() {
+  return (
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>
+  );
 }
+
+export default App;
