@@ -5,7 +5,7 @@ import { BsPencil, BsArrowRightShort } from "react-icons/bs";
 
 function Home() {
   return (
-    <div className='flex flex-col items-center justify-center h-screen font-poppins text-white'>
+    <div className='flex flex-col items-center justify-center h-screen font-poppins text-white bg-dark'>
       <div className='w-80 p-6 flex flex-col item-center justify-center mb-8 text-center  space-y-10'>
         <span className=' text-2xl font-extralight'>
           Welcome to <span className='font-medium'>Notify</span>
